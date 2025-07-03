@@ -1,0 +1,135 @@
+.card {
+  background-color: var(--card-background);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
+}
+
+.mediaContainer {
+  width: 100%;
+  height: 250px; /* Fixed height for consistency */
+  overflow: hidden;
+  background-color: #f0f0f0; /* Placeholder background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.projectMedia {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Ensures entire image/gif is visible without cropping */
+  display: block;
+}
+
+.cardContent {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* Allows content to grow */
+}
+
+.cardContent h3 {
+  font-size: 1.8em;
+  margin-bottom: 10px;
+  color: var(--primary-color);
+}
+
+.description {
+  font-size: 1em;
+  color: var(--text-color);
+  line-height: 1.6;
+  margin-bottom: 15px;
+  flex-grow: 1; /* Allows description to take available space */
+}
+
+.techStack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.techTag {
+  background-color: #e0f2f7; /* Light blue */
+  color: var(--primary-color);
+  padding: 6px 12px;
+  border-radius: 5px;
+  font-size: 0.85em;
+  font-weight: 500;
+  white-space: nowrap; /* Prevent breaking tags */
+}
+
+.toggleButton {
+  background-color: transparent;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-size: 0.9em;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px; /* Space from tech stack */
+  align-self: flex-start; /* Align to the left */
+}
+
+.toggleButton:hover {
+  background-color: var(--primary-color);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.details {
+  margin-top: 20px;
+  border-top: 1px solid var(--border-color);
+  padding-top: 20px;
+}
+
+.details h4 {
+  font-size: 1.1em;
+  color: var(--secondary-color);
+  margin-bottom: 10px;
+}
+
+.details p, .featureList {
+  font-size: 0.95em;
+  line-height: 1.6;
+  color: #555;
+}
+
+.featureList {
+  list-style: disc;
+  margin-left: 20px;
+  margin-bottom: 15px;
+}
+
+.featureList li {
+  margin-bottom: 5px;
+}
+
+.links {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px solid var(--border-color);
+}
+
+.iconLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--primary-color);
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.iconLink:hover {
+  color: #0056b3;
+}

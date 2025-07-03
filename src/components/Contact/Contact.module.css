@@ -1,0 +1,200 @@
+.contact {
+  padding: 80px 20px;
+  text-align: center;
+  background-color: #e9ecef; /* Light grey background */
+}
+
+.contact h2 {
+  font-size: 2.8em;
+  margin-bottom: 60px;
+  position: relative;
+  display: inline-block;
+}
+
+.contact h2::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background-color: var(--primary-color);
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+.contactContent {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.contactInfo,
+.contactForm {
+  background-color: var(--card-background);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 40px;
+  flex: 1;
+  min-width: 300px;
+  max-width: 450px;
+  text-align: left;
+}
+
+.contactInfo h3,
+.contactForm h3 {
+  font-size: 2em;
+  color: var(--primary-color);
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.contactInfo p {
+  font-size: 1.1em;
+  line-height: 1.7;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.infoList {
+  font-size: 1.1em;
+}
+
+.infoList li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  color: var(--text-color);
+}
+
+.infoList li svg {
+  margin-right: 15px;
+  color: var(--primary-color);
+  font-size: 1.3em;
+}
+
+.infoList li a {
+  color: var(--text-color);
+  transition: color 0.3s ease;
+}
+
+.infoList li a:hover {
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+
+.formGroup {
+  margin-bottom: 20px;
+}
+
+.formGroup label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.formGroup input[type='text'],
+.formGroup input[type='email'],
+.formGroup textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 1em;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.formGroup input:focus,
+.formGroup textarea:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+  outline: none;
+}
+
+.submitButton {
+  background-color: var(--accent-color);
+  color: white;
+  padding: 15px 30px;
+  border-radius: 8px;
+  font-size: 1.1em;
+  font-weight: 600;
+  width: 100%;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.submitButton:hover:not(:disabled) {
+  background-color: #218838;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.submitButton:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.successMessage {
+  color: var(--accent-color);
+  margin-top: 15px;
+  font-weight: 600;
+}
+
+.errorMessage {
+  color: #dc3545; /* Red */
+  margin-top: 15px;
+  font-weight: 600;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .contactContent {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+  .contactInfo,
+  .contactForm {
+    width: 90%;
+    max-width: 600px;
+    padding: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact h2 {
+    font-size: 2.2em;
+    margin-bottom: 40px;
+  }
+  .contactInfo,
+  .contactForm {
+    padding: 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact h2 {
+    font-size: 1.8em;
+  }
+  .contactInfo h3,
+  .contactForm h3 {
+    font-size: 1.6em;
+  }
+  .infoList li, .contactInfo p {
+    font-size: 1em;
+  }
+  .formGroup label {
+    font-size: 0.9em;
+  }
+  .formGroup input, .formGroup textarea {
+    font-size: 0.9em;
+    padding: 10px;
+  }
+  .submitButton {
+    padding: 12px 20px;
+    font-size: 1em;
+  }
+}

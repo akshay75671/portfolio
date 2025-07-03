@@ -1,0 +1,213 @@
+.header {
+  background-color: var(--card-background);
+  color: var(--text-color);
+  padding: 0 20px;
+  height: var(--header-height);
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.logo {
+  font-size: 1.8em;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.nav ul {
+  display: flex;
+  gap: 30px;
+}
+
+.nav li a {
+  color: var(--text-color);
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav li a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: var(--primary-color);
+  bottom: -5px;
+  left: 0;
+  transition: width 0.3s ease;
+}
+
+.nav li a:hover::after {
+  width: 100%;
+}
+
+.nav li a:hover {
+  color: var(--primary-color);
+}
+
+.menuToggle {
+  display: none;
+  font-size: 1.8em;
+  cursor: pointer;
+  color: var(--text-color);
+}
+
+/* Responsive Styles for Header */
+@media (max-width: 768px) {
+  .nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: var(--header-height);
+    left: 0;
+    width: 100%;
+    background-color: var(--card-background);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+    padding: 20px 0;
+  }
+
+  .nav.open {
+    display: flex;
+  }
+
+  .nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .nav li a {
+    padding: 10px 0;
+    display: block;
+    width: fit-content; /* Center text */
+    margin: 0 auto; /* Center text */
+  }
+
+  .menuToggle {
+    display: block;
+  }
+}
+
+.header {
+  background-color: var(--card-background);
+  color: var(--text-color);
+  padding: 0 20px;
+  height: var(--header-height);
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.logo {
+  /* Remove font styles for text logo */
+  font-size: 0; /* Hide font fallback if any */
+  display: flex; /* Helps align image if it has padding/margin */
+  align-items: center;
+}
+
+.logoImage {
+  height: 40px; /* Adjust as needed for your logo's desired height */
+  width: auto; /* Maintain aspect ratio */
+  max-width: 180px; /* Ensure logo doesn't get too wide on larger screens */
+  display: block; /* Remove extra space below image */
+}
+
+.nav ul {
+  display: flex;
+  gap: 30px;
+}
+
+.nav li a {
+  color: var(--text-color);
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav li a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: var(--primary-color);
+  bottom: -5px;
+  left: 0;
+  transition: width 0.3s ease;
+}
+
+.nav li a:hover::after {
+  width: 100%;
+}
+
+.nav li a:hover {
+  color: var(--primary-color);
+}
+
+.menuToggle {
+  display: none;
+  font-size: 1.8em;
+  cursor: pointer;
+  color: var(--text-color);
+}
+
+/* Responsive Styles for Header */
+@media (max-width: 768px) {
+  .nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: var(--header-height);
+    left: 0;
+    width: 100%;
+    background-color: var(--card-background);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+    padding: 20px 0;
+  }
+
+  .nav.open {
+    display: flex;
+  }
+
+  .nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .nav li a {
+    padding: 10px 0;
+    display: block;
+    width: fit-content; /* Center text */
+    margin: 0 auto; /* Center text */
+  }
+
+  .menuToggle {
+    display: block;
+  }
+
+  .logoImage {
+    height: 35px; /* Slightly smaller logo on mobile */
+  }
+}
